@@ -1,0 +1,19 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: aqua; */
+    background-image: url("image.jpg");
+    background-size: auto;
+    background-size: 100% ;
+}
+.table{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.display-6{
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
