@@ -36,6 +36,9 @@ submit.addEventListener("click", (e) => {
     getWeather(city.value)
 })
 getWeather("Delhi");
+
+
+//this is for the update of the Sanghai Boston Lucknow And kolkata in the table
 function myFunction(){
     const cityNames=document.querySelectorAll("tr");
     console.log(cityNames);
