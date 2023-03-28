@@ -96,5 +96,6 @@ function myFunction(){
     })
 
 }
+myFunction();
 
 
