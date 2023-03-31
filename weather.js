@@ -22,7 +22,7 @@ const getWeather = (city) => {
             max_temp.innerHTML = `${response.max_temp}\u00B0C`;
             wind_speed.innerHTML =`${ response.wind_speed}km/hr`;
             wind_speed2.innerHTML = `${response.wind_speed}`;
-            wind_degrees.innerHTML = `${response.wind_degrees}\u00B0C`;
+            wind_degrees.innerHTML = `${response.wind_degrees}\u00B0`;
             const sunRise=new Date(response.sunrise*1000);
             let date=sunRise.toString();
         let time=date.split(" ");
