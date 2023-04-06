@@ -9,7 +9,7 @@ const options = {
 const getWeather = (city) => {
     fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
         .then((response) => {
-            if(response.status==400){
+            if(response.status>=300){
                 return 400;
             }
            return response.json();
