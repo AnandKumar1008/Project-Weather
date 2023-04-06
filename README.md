@@ -1,6 +1,6 @@
 # Weather App
 
-A simple weather app built with JavaScript that displays the current weather conditions for a given location.
+A simple weather app built with HTML, CSS, and JavaScript that uses an API call to display the current weather conditions for a given location.
 
 ## Installation
 
@@ -9,7 +9,7 @@ git clone https://github.com/AnandKumar1008/Project-Weather.git
 
 ## Usage
 
-To use the Weather App, open the index.html file in your browser. You will be prompted to enter a city name. Once you enter a city name and click the "Get Weather" button, the app will display the current weather conditions for that location.
+To use the Weather App, open the index.html file in your browser. The app will display the current weather conditions for a list of popular cities by default. To get the weather report for a different location, enter the city name in the input field and click the "Get Weather Report" button. The app will make an API call and display the current weather conditions for that location.
 
 ## Contributing
 
@@ -26,4 +26,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Contact
 
-If you have any questions or comments about the Weather App, you can contact me at [anandkumar031199@gmail.com](mailto:anandkumar031199@gmail.com).
+If you have any questions or comments about the Weather App, you can contact me at [anandkumar031199@gmail.com](anandkumar031199@gmail.com).
