@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change H1 visibility using JavaScript</title>
+</head>
+
+<body>
+    <h1 id="myHeading">Hello World!</h1>
+
+    <button onclick="hideHeading()">Hide Heading</button>
+    <button onclick="showHeading()">Show Heading</button>
+
+    <script>
+        function hideHeading() {
+            document.getElementById("myHeading").style.display = "none";
+        }
+
+        function showHeading() {
+            document.getElementById("myHeading").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

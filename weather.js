@@ -7,12 +7,27 @@ const options = {
 };
 
 const getWeather = (city) => {
-    cityName.innerHTML = city
     fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
-        .then(response => response.json())
+        .then((response) => {
+            if(response.status==400){
+                return 400;
+            }
+           return response.json();
+        })
         .then(response => {
-            console.log(response)
-            // cloud_pct.innerHTML = response.cloud_pct
+            const heading=document.getElementById('Weather-heading');
+            const head=document.getElementById('wrong-name');
+
+            if(response===400){
+                head.style.display="block";
+                heading.style.display="none";
+                return;
+            }
+            head.style.display="none";
+            heading.style.display="block";
+
+            cityName.innerHTML = city
+
             temp.innerHTML = `${response.temp}\u00B0C`;
             temp2.innerHTML = response.temp;
             feels_like.innerHTML = `${response.feels_like}\u00B0C`;
@@ -24,19 +39,23 @@ const getWeather = (city) => {
             wind_speed2.innerHTML = `${response.wind_speed}`;
             wind_degrees.innerHTML = `${response.wind_degrees}\u00B0`;
             const sunRise=new Date(response.sunrise*1000);
-            let date=sunRise.toString();
-        let time=date.split(" ");
-            sunrise.innerHTML = time[4];
+        //     let date=sunRise.toString();
+        // let time=date.split(" ");
+       let time_am_pm=sunRise.toLocaleTimeString('en-US',{hour:'numeric',minute:'numeric',second:'numeric',hour12:true});
+
+            sunrise.innerHTML = time_am_pm;
             const sunSet=new Date(response.sunset*1000);
             date=sunSet.toString();
         time=date.split(" ");
            
+        val=sunSet.toLocaleTimeString('en-US',{hour:'numeric',minute:'numeric',second:'numeric',hour12:true});
 
-            sunset.innerHTML = time[4];
+            sunset.innerHTML = time_am_pm;
 
 
         })
-        .catch(err => console.error(err));
+        .catch(err =>
+            console.error(err));
 }
 
 submit.addEventListener("click", (e) => {
@@ -49,16 +68,14 @@ getWeather("Delhi");
 //this is for the update of the Sanghai Boston Lucknow And kolkata in the table
 function myFunction(){
     const cityNames=document.querySelectorAll("tr");
-    console.log(cityNames);
     cityNames.forEach((element,index)=>{
          if(index===0) return;
         const city=element.querySelector('th').innerText;
-        console.log(city);
         const id=element.id;
-        console.log(id);
            fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
     .then(response => response.json())
     .then(response => {
+        console.log(response);
         const th=document.createElement('th');
         const td1=document.createElement('td');
         const td2=document.createElement('td');
@@ -78,17 +95,13 @@ function myFunction(){
         td5.innerText=`${response.min_temp}\u00B0C`;
 
         const sunRise=new Date(response.sunrise*1000);
-        let date=sunRise.toString();
-        let time=date.split(" ");
-        td6.innerText=time[4];
+        let time_am_pm=sunRise.toLocaleTimeString('en-US',{hour:'numeric',minute:'numeric',second:'numeric',hour12:true});
+       
+        td6.innerText=time_am_pm;
         const sunSet=new Date(response.sunset*1000);
-        console.log(sunRise);
-        
-         date=sunSet.toString();
-         time=date.split(" ");
-
-        
-        td7.innerText=time[4];
+        time_am_pm=sunSet.toLocaleTimeString('en-US',{hour:'numeric',minute:'numeric',second:'numeric',hour12:true});
+       
+        td7.innerText=time_am_pm;
         td8.innerText=`${response.wind_degrees}\u00B0`;
         td9.innerText=`${response.wind_speed}km/hr`;
         td10.innerText=response.cloud_pct;
@@ -103,18 +116,12 @@ function myFunction(){
         element.appendChild(td7);
         element.appendChild(td8); 
         element.appendChild(td9);
-        element.appendChild(td10);      
-
-
-   
-
+        element.appendChild(td10); 
     })
     .catch(err => console.error(err));
-
-
     })
-
 }
 myFunction();
 
 
+console.log(moment());

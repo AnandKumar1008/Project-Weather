@@ -8,12 +8,26 @@ body{
     background-image: url("image.jpg");
     background-size: auto;
     background-size: 100% ;
+    /* background-color: orange; */
 }
 .table{
-    background-color: aliceblue;
+    background-color:lightsteelblue;
     border-radius: 5px;
 }
 .display-6{
-    background-color: antiquewhite;
+    /* display:inline-block; */
+    /* text-content: center; */
+    text-align: center;
     border-radius: 10px;
+}
+.display-6 span{
+    /* background-color: antiquewhite; */
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: orange;
+
+}
+#wrong-name{
+    background-color: yellow;
+    border-radius: 5px;
 }
