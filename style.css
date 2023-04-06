@@ -1,33 +1,116 @@
-*{
-    margin:0px;
-    padding:0px;
+* {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 body{
+    background-color:darkslategray;
+
+}
+
+.main {
     /* background-color: aqua; */
     background-image: url("image.jpg");
     background-size: auto;
-    background-size: 100% ;
+    background-size: 100%;
     /* background-color: orange; */
 }
-.table{
-    background-color:lightsteelblue;
+
+.table {
+    background-color: lightsteelblue;
     border-radius: 5px;
 }
-.display-6{
+
+.display-6 {
     /* display:inline-block; */
     /* text-content: center; */
     text-align: center;
     border-radius: 10px;
 }
-.display-6 span{
+
+.display-6 span {
     /* background-color: antiquewhite; */
     border-radius: 5px;
     padding: 5px 5px;
     background-color: orange;
 
 }
-#wrong-name{
-    background-color: yellow;
+
+#wrong-name {
+    /* background-color: yellow; */
     border-radius: 5px;
 }
+
+.w1 {
+    font: solid bold 20px black;
+    text-align: center;
+    margin: 10px 10px;
+    /* background-color: aquamarine; */
+}
+
+.w2 {
+    text-align: center;
+    font: bold balck;
+}
+
+.w3 {
+    text-align: center;
+}
+.footer{
+    /* background-color:darkslategray; */
+    color: white;
+}
+/* *********************************************************** */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .icons{
+    display: flex;
+    justify-content: center;
+
+    /* justify-content: space-between; */
+  }
+  /* *************************** */
+  .bottom{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  /* .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    position: relative;
+    right: 20px;
+} */

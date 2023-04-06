@@ -123,5 +123,3 @@ function myFunction(){
 }
 myFunction();
 
-
-console.log(moment());
